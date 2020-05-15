@@ -1,0 +1,11 @@
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\ChangeTracking_DeployPackage.ps1
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\ChangeTracking_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\ChangeTracking.sql
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\ChangeTracking.dll
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\bin\Debug\ChangeTracking.pdb
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\obj\Debug\ChangeTracking.sqlprojAssemblyReference.cache
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\obj\Debug\ChangeTracking_Provisioning.sql
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\obj\Debug\ChangeTracking.sql
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\obj\Debug\ChangeTracking.dll
+C:\Users\mkomaravolu\Desktop\Local_Database\madhu\ChangeTracking\obj\Debug\ChangeTracking.pdb

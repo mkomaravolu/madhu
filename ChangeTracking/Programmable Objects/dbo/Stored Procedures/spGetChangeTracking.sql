@@ -1,4 +1,12 @@
-﻿
+IF OBJECT_ID('[dbo].[spGetChangeTracking]') IS NOT NULL
+	DROP PROCEDURE [dbo].[spGetChangeTracking];
+
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
 CREATE PROCEDURE [dbo].[spGetChangeTracking]
 	AS
 BEGIN
@@ -90,3 +98,4 @@ END
 
 
 
+GO

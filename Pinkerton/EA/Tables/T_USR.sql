@@ -24,10 +24,17 @@
     [OM_LOGIN_ID]              INT            NULL,
     [REQUESTING_DIRECTORY_ID]  INT            NULL,
     [USR_ATTACHMENTS_ID]       INT            NULL,
+    [test_smaple]              INT            NULL,
     CONSTRAINT [PK_T_USR] PRIMARY KEY CLUSTERED ([USR_ID] ASC),
     CONSTRAINT [FK_T_USR_L_CLIENT] FOREIGN KEY ([CLIENT_ID]) REFERENCES [EA].[L_CLIENT] ([CLIENT_ID]),
     CONSTRAINT [FK_T_USR_T_USR_ATTACHMENTS] FOREIGN KEY ([USR_ATTACHMENTS_ID]) REFERENCES [EA].[T_USR_ATTACHMENTS] ([USR_ATTACHMENTS_ID])
 );
+
+
+GO
+ALTER TABLE [EA].[T_USR] ENABLE CHANGE_TRACKING WITH (TRACK_COLUMNS_UPDATED = ON);
+
+
 
 
 
@@ -284,4 +291,14 @@ IF UPDATE(REVIEWER_ID)
   from inserted
   left outer join deleted on Inserted.USR_ID=deleted.USR_ID
   and Inserted.USR_ATTACHMENTS_ID <>deleted.USR_ATTACHMENTS_ID
+
+  
+   IF UPDATE(test_smaple)
+  INSERT EA.CHANGE_DATA_CAPTURE_USR
+  (CHANGE_DATE,USER_NAME,Application,TABLE_NAME,OPERATION,VERSION_ID ,DESCRIPTION,[COLUMN_NAME],Oldvalue,newValue)
+  select getdate(),suser_sname(),APP_NAME(),'[EA].[T_USR]',@OPERATION,
+  inserted.USR_ID,inserted.USR_CODE,'USR_ATTACHMENTS_ID',INSERTED.test_smaple,DELETED.test_smaple
+  from inserted
+  left outer join deleted on Inserted.USR_ID=deleted.USR_ID
+  and Inserted.test_smaple <>deleted.test_smaple
 
