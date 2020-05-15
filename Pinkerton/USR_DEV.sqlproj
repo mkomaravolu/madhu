@@ -69,7 +69,6 @@
   <ItemGroup>
     <Build Include="EA\Tables\T_USR_OPERATION_MANAGER.sql" />
     <Build Include="EA\Tables\T_USR_REQUESTING_DIRECTOR.sql" />
-    <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
     <Build Include="dbo\Tables\sysdiagrams.sql" />
     <Build Include="EA\Tables\L_CLIENT.sql" />
     <Build Include="EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
@@ -100,7 +99,6 @@
     <Build Include="EA\Tables\T_USR_PURPOSE.sql" />
     <Build Include="EA\Tables\T_USR_RECIPIENTS.sql" />
     <Build Include="EA\Tables\T_USR_SERVICE_TYPE.sql" />
-    <Build Include="EA\Tables\T_USR_VERSION_JSON.sql" />
     <Build Include="EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
     <Build Include="dbo\Functions\fn_diagramobjects.sql" />
     <Build Include="dbo\Stored Procedures\sp_alterdiagram.sql" />

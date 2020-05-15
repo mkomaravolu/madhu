@@ -36,6 +36,7 @@
     <Provisioner>CustomScripts</Provisioner>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DeployChangesInitialImportDone>True</DeployChangesInitialImportDone>
+    <IncludeObjectsInDataSync>Table=[EA].[T_USR]</IncludeObjectsInDataSync>
   </PropertyGroup>
   <!-- SQL CHANGE AUTOMATION OFFLINE SCHEMA MODEL OPTIONS -->
   <PropertyGroup>
@@ -178,6 +179,13 @@
     <Folder Include="Schema-Model\EA\Tables\" />
     <Folder Include="Schema-Model\Security\" />
     <Folder Include="Schema-Model\Security\Schemas\" />
+    <Folder Include="EA\" />
+    <Folder Include="EA\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Provisioning\CreateDatabase.sql" />
@@ -190,49 +198,94 @@
     <None Include="Post-Deployment\01_Finalize_Deployment.sql" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_alterdiagram.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_creatediagram.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_dropdiagram.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_helpdiagramdefinition.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_helpdiagrams.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_renamediagram.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\sp_upgraddiagrams.sql" />
-    <Build Include="Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql" />
-    <Build Include="Schema-Model\dbo\Tables\sysdiagrams.sql" />
-    <Build Include="Schema-Model\dbo\Tables\__EFMigrationsHistory.sql" />
-    <Build Include="Schema-Model\EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_CLIENT.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_COUNTRY.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_MASTER_TYPE.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_MASTER_VALUE.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_REQUESTING_OFFICE.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_REQUESTING_REGION.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_SERVICES.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_SERVICE_TYPE.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_SERVICE_TYPE_CATEGORY.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_SUB_SERVICES.sql" />
-    <Build Include="Schema-Model\EA\Tables\L_USR_STATUS.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_CATEGORY.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_CERTAINTY.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_CHANNEL.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_RECIPENT.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_SEVERITY.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_URGENCY.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ALERT_WARNE_TYPE.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_ATTACHMENTS.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_AUTHOR.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_HIST.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_LOCATION.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_MOBILE_APP_USER.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_OPERATION_MANAGER.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_PURPOSE.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_RECIPIENTS.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_REQUESTING_DIRECTOR.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
-    <Build Include="Schema-Model\EA\Tables\T_USR_VERSION_JSON.sql" />
-    <Build Include="Schema-Model\Security\Schemas\EA.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_alterdiagram.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_creatediagram.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_dropdiagram.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_helpdiagramdefinition.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_helpdiagrams.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_renamediagram.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\sp_upgraddiagrams.sql" />
+    <None Include="Programmable Objects\dbo\Stored Procedures\spGetChangeTracking.sql" />
+    <None Include="Schema-Model\dbo\Tables\sysdiagrams.sql" />
+    <None Include="Schema-Model\dbo\Tables\__EFMigrationsHistory.sql" />
+    <None Include="Schema-Model\EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
+    <None Include="Schema-Model\EA\Tables\L_CLIENT.sql" />
+    <None Include="Schema-Model\EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
+    <None Include="Schema-Model\EA\Tables\L_COUNTRY.sql" />
+    <None Include="Schema-Model\EA\Tables\L_MASTER_TYPE.sql" />
+    <None Include="Schema-Model\EA\Tables\L_MASTER_VALUE.sql" />
+    <None Include="Schema-Model\EA\Tables\L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
+    <None Include="Schema-Model\EA\Tables\L_REQUESTING_OFFICE.sql" />
+    <None Include="Schema-Model\EA\Tables\L_REQUESTING_REGION.sql" />
+    <None Include="Schema-Model\EA\Tables\L_SERVICES.sql" />
+    <None Include="Schema-Model\EA\Tables\L_SERVICE_TYPE.sql" />
+    <None Include="Schema-Model\EA\Tables\L_SERVICE_TYPE_CATEGORY.sql" />
+    <None Include="Schema-Model\EA\Tables\L_SUB_SERVICES.sql" />
+    <None Include="Schema-Model\EA\Tables\L_USR_STATUS.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_CATEGORY.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_CERTAINTY.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_CHANNEL.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_RECIPENT.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_SEVERITY.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_URGENCY.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ALERT_WARNE_TYPE.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_ATTACHMENTS.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_AUTHOR.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_HIST.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_LOCATION.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_MOBILE_APP_USER.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_OPERATION_MANAGER.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_PURPOSE.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_RECIPIENTS.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_REQUESTING_DIRECTOR.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_SERVICE_TYPE.sql" />
+    <None Include="Schema-Model\EA\Tables\T_USR_VERSION_JSON.sql" />
+    <None Include="Schema-Model\Security\Schemas\EA.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EA\Tables\EA.CHANGE_DATA_CAPTURE_USR.sql" />
+    <None Include="EA\Tables\EA.T_USR_SERVICE_TYPE.sql" />
+    <None Include="EA\Tables\EA.T_USR_RECIPIENTS.sql" />
+    <None Include="EA\Tables\EA.T_USR_PURPOSE.sql" />
+    <None Include="EA\Tables\EA.T_USR_MOBILE_APP_USER.sql" />
+    <None Include="EA\Tables\EA.T_USR_LOCATION.sql" />
+    <None Include="EA\Tables\EA.T_USR_HIST.sql" />
+    <None Include="EA\Tables\EA.T_USR_AUTHOR.sql" />
+    <None Include="EA\Tables\EA.T_USR_ATTACHMENTS.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_WARNE_TYPE.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_URGENCY.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_SEVERITY.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_RECIPENT.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_CHANNEL.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_CERTAINTY.sql" />
+    <None Include="EA\Tables\EA.T_USR_ALERT_CATEGORY.sql" />
+    <None Include="EA\Tables\EA.T_USR.sql" />
+    <None Include="EA\Tables\EA.L_USR_STATUS.sql" />
+    <None Include="EA\Tables\EA.L_SUB_SERVICES.sql" />
+    <None Include="EA\Tables\EA.L_SERVICES.sql" />
+    <None Include="EA\Tables\EA.L_SERVICE_TYPE_CATEGORY.sql" />
+    <None Include="EA\Tables\EA.L_SERVICE_TYPE.sql" />
+    <None Include="EA\Tables\EA.L_REQUESTING_REGION.sql" />
+    <None Include="EA\Tables\EA.L_REQUESTING_OFFICE.sql" />
+    <None Include="EA\Tables\EA.L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
+    <None Include="EA\Tables\EA.L_MASTER_VALUE.sql" />
+    <None Include="EA\Tables\EA.L_MASTER_TYPE.sql" />
+    <None Include="EA\Tables\EA.L_COUNTRY.sql" />
+    <None Include="EA\Tables\EA.L_CLIENT_REQUESTING_OFFICE.sql" />
+    <None Include="EA\Tables\EA.L_CLIENT.sql" />
+    <None Include="EA\Tables\EA.T_USR_REQUESTING_DIRECTOR.sql" />
+    <None Include="EA\Tables\EA.T_USR_OPERATION_MANAGER.sql" />
+    <None Include="dbo\Views\dbo.__MigrationLogCurrent.sql" />
+    <None Include="dbo\Functions\dbo.fn_diagramobjects.sql" />
+    <None Include="dbo\Stored Procedures\dbo.spGetChangeTracking.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_upgraddiagrams.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_renamediagram.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_helpdiagrams.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_helpdiagramdefinition.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_dropdiagram.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_creatediagram.sql" />
+    <None Include="dbo\Stored Procedures\dbo.sp_alterdiagram.sql" />
+    <None Include="Security\EA.sql" />
   </ItemGroup>
 </Project>
