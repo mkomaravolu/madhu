@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>USR_DEV</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{5007e736-69c8-4ef9-aaaa-8d00ba15cb03}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Pinkerton</RootNamespace>
+    <AssemblyName>Pinkerton</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="EA\" />
+    <Folder Include="EA\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="EA\Tables\T_USR_OPERATION_MANAGER.sql" />
+    <Build Include="EA\Tables\T_USR_REQUESTING_DIRECTOR.sql" />
+    <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
+    <Build Include="dbo\Tables\sysdiagrams.sql" />
+    <Build Include="EA\Tables\L_CLIENT.sql" />
+    <Build Include="EA\Tables\L_CLIENT_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\L_COUNTRY.sql" />
+    <Build Include="EA\Tables\L_MASTER_TYPE.sql" />
+    <Build Include="EA\Tables\L_MASTER_VALUE.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_DIRECTOR_DEPARTMENT.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_OFFICE.sql" />
+    <Build Include="EA\Tables\L_REQUESTING_REGION.sql" />
+    <Build Include="EA\Tables\L_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\L_SERVICE_TYPE_CATEGORY.sql" />
+    <Build Include="EA\Tables\L_SERVICES.sql" />
+    <Build Include="EA\Tables\L_SUB_SERVICES.sql" />
+    <Build Include="EA\Tables\L_USR_STATUS.sql" />
+    <Build Include="EA\Tables\T_USR.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CATEGORY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CERTAINTY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_CHANNEL.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_RECIPENT.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_SEVERITY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_URGENCY.sql" />
+    <Build Include="EA\Tables\T_USR_ALERT_WARNE_TYPE.sql" />
+    <Build Include="EA\Tables\T_USR_ATTACHMENTS.sql" />
+    <Build Include="EA\Tables\T_USR_AUTHOR.sql" />
+    <Build Include="EA\Tables\T_USR_HIST.sql" />
+    <Build Include="EA\Tables\T_USR_LOCATION.sql" />
+    <Build Include="EA\Tables\T_USR_MOBILE_APP_USER.sql" />
+    <Build Include="EA\Tables\T_USR_PURPOSE.sql" />
+    <Build Include="EA\Tables\T_USR_RECIPIENTS.sql" />
+    <Build Include="EA\Tables\T_USR_SERVICE_TYPE.sql" />
+    <Build Include="EA\Tables\T_USR_VERSION_JSON.sql" />
+    <Build Include="EA\Tables\CHANGE_DATA_CAPTURE_USR.sql" />
+    <Build Include="dbo\Functions\fn_diagramobjects.sql" />
+    <Build Include="dbo\Stored Procedures\sp_alterdiagram.sql" />
+    <Build Include="dbo\Stored Procedures\sp_creatediagram.sql" />
+    <Build Include="dbo\Stored Procedures\sp_dropdiagram.sql" />
+    <Build Include="dbo\Stored Procedures\sp_helpdiagramdefinition.sql" />
+    <Build Include="dbo\Stored Procedures\sp_helpdiagrams.sql" />
+    <Build Include="dbo\Stored Procedures\sp_renamediagram.sql" />
+    <Build Include="dbo\Stored Procedures\sp_upgraddiagrams.sql" />
+    <Build Include="dbo\Stored Procedures\spGetChangeTracking.sql" />
+    <Build Include="Security\EA.sql" />
+  </ItemGroup>
+</Project>
