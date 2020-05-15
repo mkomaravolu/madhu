@@ -1,0 +1,75 @@
+5/15/2020 1:43:02 PM	This log contains information about the import schema operation into project 'Pinkerton' on computer 'CBR-LAP-DEL2715' by user 'mkomaravolu'.
+5/15/2020 1:43:02 PM	Import of database schema has started.
+5/15/2020 1:43:07 PM	Gathering database options
+5/15/2020 1:43:07 PM	Gathering users
+5/15/2020 1:43:07 PM	Gathering roles
+5/15/2020 1:43:07 PM	Gathering application roles
+5/15/2020 1:43:07 PM	Gathering role memberships
+5/15/2020 1:43:07 PM	Gathering filegroups
+5/15/2020 1:43:07 PM	Gathering full-text catalogs
+5/15/2020 1:43:07 PM	Gathering assemblies
+5/15/2020 1:43:07 PM	Gathering certificates
+5/15/2020 1:43:07 PM	Gathering asymmetric keys
+5/15/2020 1:43:07 PM	Gathering symmetric keys
+5/15/2020 1:43:07 PM	Gathering encrypted symmetric keys
+5/15/2020 1:43:07 PM	Gathering schemas
+5/15/2020 1:43:07 PM	Gathering XML schema collections
+5/15/2020 1:43:07 PM	Gathering user-defined data types
+5/15/2020 1:43:07 PM	Gathering user-defined types
+5/15/2020 1:43:07 PM	Gathering table types
+5/15/2020 1:43:07 PM	Gathering unique keys for table types
+5/15/2020 1:43:07 PM	Gathering primary keys for table types
+5/15/2020 1:43:07 PM	Gathering check constraints for table types
+5/15/2020 1:43:07 PM	Gathering default constraints for table types
+5/15/2020 1:43:07 PM	Gathering partition functions
+5/15/2020 1:43:07 PM	Gathering partition schemes
+5/15/2020 1:43:07 PM	Gathering functions
+5/15/2020 1:43:07 PM	Gathering encrypted functions
+5/15/2020 1:43:07 PM	Gathering aggregates
+5/15/2020 1:43:07 PM	Gathering procedures
+5/15/2020 1:43:07 PM	Gathering encrypted procedures
+5/15/2020 1:43:07 PM	Gathering tables
+5/15/2020 1:43:07 PM	Gathering primary keys
+5/15/2020 1:43:07 PM	Gathering unique constraints
+5/15/2020 1:43:07 PM	Gathering foreign keys
+5/15/2020 1:43:07 PM	Gathering default constraints
+5/15/2020 1:43:07 PM	Gathering check constraints
+5/15/2020 1:43:07 PM	Gathering views
+5/15/2020 1:43:07 PM	Gathering encrypted views
+5/15/2020 1:43:07 PM	Gathering indexes
+5/15/2020 1:43:07 PM	Gathering statistics
+5/15/2020 1:43:07 PM	Gathering full-text index stoplists
+5/15/2020 1:43:07 PM	Gathering search property lists
+5/15/2020 1:43:07 PM	Gathering search properties
+5/15/2020 1:43:07 PM	Gathering full-text indexes
+5/15/2020 1:43:07 PM	Gathering column store indexes
+5/15/2020 1:43:07 PM	Gathering spatial indexes
+5/15/2020 1:43:07 PM	Gathering XML indexes
+5/15/2020 1:43:07 PM	Gathering encrypted triggers
+5/15/2020 1:43:07 PM	Gathering triggers
+5/15/2020 1:43:07 PM	Gathering encrypted and clr ddl triggers
+5/15/2020 1:43:07 PM	Gathering ddl triggers
+5/15/2020 1:43:07 PM	Gathering synonyms
+5/15/2020 1:43:07 PM	Gathering defaults
+5/15/2020 1:43:07 PM	Gathering data constraint uddt bindings
+5/15/2020 1:43:07 PM	Gathering rules
+5/15/2020 1:43:07 PM	Gathering data constraint uddt bindings
+5/15/2020 1:43:07 PM	Gathering message types
+5/15/2020 1:43:07 PM	Gathering queues
+5/15/2020 1:43:07 PM	Gathering contracts
+5/15/2020 1:43:07 PM	Gathering services
+5/15/2020 1:43:08 PM	Gathering event notifications
+5/15/2020 1:43:08 PM	Gathering remote service bindings
+5/15/2020 1:43:08 PM	Gathering broker priorities
+5/15/2020 1:43:08 PM	Gathering signatures
+5/15/2020 1:43:08 PM	Gathering data compression options
+5/15/2020 1:43:08 PM	Gathering sequence types
+5/15/2020 1:43:08 PM	Gathering extended properties
+5/15/2020 1:43:08 PM	Gathering credentials
+5/15/2020 1:43:08 PM	Gathering logins
+5/15/2020 1:43:08 PM	Gathering server audits
+5/15/2020 1:43:08 PM	Scanning project for duplicate elements
+5/15/2020 1:43:08 PM	Finished duplicate element processing
+5/15/2020 1:43:09 PM	Finished importing database.
+5/15/2020 1:43:09 PM	A summary of the import was saved to the following location: C:\Users\mkomaravolu\Desktop\Local_Database\madhu\Pinkerton\Import Schema Logs\Pinkerton_20200515081302.log
+5/15/2020 1:43:09 PM	Click Finish to continue...
